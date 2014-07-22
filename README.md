@@ -3,18 +3,23 @@
 
 A fully loaded yet lightweight jQuery accordion to fulfill all your accordion needs! Only 4k zipped!
 
-This is my first jQuery plugin. Any **courteous** and **constructive** critique is welcome!
+This is my first jQuery plugin. Any **courteous and constructive** critique is welcome
 
 
 ##Set Up
 Accordable assumes the following html structure.
 
 ````
-<ul>
+<ul id="element">
   <li>
-    <span>Heading</span>
-    <div>Copy</div>
+    <span>Panel Heading 1</span>
+    <div>Body copy.</div>
   </li>
+  <li>
+    <span>Panel Heading 2</span>
+    <div>Body copy.</div>
+  </li>
+  <!-- etc. -->
 </ul>
 ````
 
