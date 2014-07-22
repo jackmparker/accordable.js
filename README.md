@@ -1,7 +1,9 @@
 # accordable.js
 ---------------
 
-A fully loaded jQuery accordion to fulfill all your accordion needs!
+A fully loaded yet lightweight jQuery accordion to fulfill all your accordion needs! Only 4k zipped!
+
+This is my first jQuery plugin. Any **courteous** and **constructive** critique is welcome!
 
 
 ##Set Up
