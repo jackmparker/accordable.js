@@ -35,7 +35,7 @@ For the easiest set up:
 ````
 
 ## Defaults and Options
-Accordable has a number of optional settings
+Accordable has a number of optional settings:
 
 ````javascript
 (function(){
