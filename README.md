@@ -7,19 +7,19 @@ This is my first jQuery plugin. Any **courteous and constructive** critique is w
 
 
 ##Set Up
-Accordable assumes the following html structure.
+Accordable assumes the following html structure:
 
 ````
 <ul id="element">
-  <li>
-    <span>Panel Heading 1</span>
-    <div>Body copy.</div>
-  </li>
-  <li>
-    <span>Panel Heading 2</span>
-    <div>Body copy.</div>
-  </li>
-  <!-- etc. -->
+	<li>
+		<span>Panel Heading 1</span>
+		<div>Body copy.</div>
+	</li>
+	<li>
+		<span>Panel Heading 2</span>
+		<div>Body copy.</div>
+	</li>
+	<!-- etc. -->
 </ul>
 ````
 
