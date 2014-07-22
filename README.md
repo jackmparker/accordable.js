@@ -5,6 +5,8 @@ A fully loaded yet lightweight jQuery accordion to fulfill all your accordion ne
 
 This is my first jQuery plugin. Any **courteous and constructive** critique is welcome.
 
+*Demo Coming Soon!*
+
 
 ##Set Up
 Accordable assumes the following html structure:
