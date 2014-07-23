@@ -1,4 +1,4 @@
-# accordable.js
+# Accordable.js
 ---------------
 
 A fully loaded yet lightweight jQuery accordion to fulfill all your accordion needs! Only 4k zipped!
