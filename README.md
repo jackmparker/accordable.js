@@ -74,3 +74,9 @@ Accordable has a number of optional settings:
 
 })();
 ````
+
+=======================================================
+
+Dual licensed under the MIT and GPL licenses:
+- http://www.gnu.org/licenses/gpl.html
+- http://www.opensource.org/licenses/mit-license.php
