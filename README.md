@@ -3,7 +3,7 @@
 
 A responsive, fully-loaded jQuery accordion plugin.
 
-(*This is my first jQuery plugin. Any **courteous and constructive** critique is welcome.*)
+(*This is my first jQuery plugin. Any courteous and constructive critique is welcome.*)
 
 
 ## Full Site & Demo
