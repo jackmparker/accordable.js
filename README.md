@@ -25,13 +25,13 @@ http://jackmparker.com/accordable.js/
 Include the proper files in your page:
 ````javascript
 <!-- include jQuery -->
-&lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"&gt;&lt;/script&gt;
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 <!-- include jQuery easing (optional for easing transitions) -->
-&lt;script type="text/javascript" src="jquery.easing.1.3.min.js"&gt;&lt;/script&gt;
+<script type="text/javascript" src="jquery.easing.1.3.min.js"></script>
 
 <!-- include accordable.js -->
-&lt;script type="text/javascript" src="jquery.accordable.min.js"&gt;&lt;/script&gt;
+<script type="text/javascript" src="jquery.accordable.min.js"></script>
 ````
 Next, set up your HTML.
 accordable.js assumes the following HTML structure:
