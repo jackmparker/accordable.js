@@ -1,46 +1,57 @@
-# Accordable.js
+# accordable.js
 ---------------
 
-A fully loaded yet lightweight jQuery accordion to fulfill all your accordion needs! Only 4k zipped!
+A responsive, fully-loaded jQuery accordion plugin.
 
-This is my first jQuery plugin. Any **courteous and constructive** critique is welcome.
+(*This is my first jQuery plugin. Any **courteous and constructive** critique is welcome.*)
 
-*Demo Coming Soon!*
+
+## Full Site & Demo
+http://jackmparker.com/accordable.js/
 
 
 ## Features
-- Fully responsive with lots of features
-- Only 4kb! (minified)
-- Choose which slides to open on page load or have all open
-- Set to have one slide open at a time or toggle each individually
+- Fully responsive with lots of features yet lightweight (only 4k minified)
 - Supports jQuery easing for panel transitions
 - Built-in callback functions on load, before, and after panel transitions
 - Use your own custom CSS to style
-- Gracefully degrades if user disables JavaScript
+- Gracefully degrades if JavaScript is disabled
 - Can hold any HTML/PHP/JavaScript, etc.
 - Allows multiple instances on a page
-- Works in IE8+ and all <strike>modern</strike> real browsers (Chrome, Safari, Firefox, Opera)
+- Works in IE8+ and all <strike>real</strike> modern browsers (Chrome, Safari, Firefox, Opera)
 
 
 ## Set Up
-Accordable assumes the following html structure:
+Include the proper files in your page:
+````javascript
+<!-- include jQuery -->
+&lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"&gt;&lt;/script&gt;
+
+<!-- include jQuery easing (optional for easing transitions) -->
+&lt;script type="text/javascript" src="jquery.easing.1.3.min.js"&gt;&lt;/script&gt;
+
+<!-- include accordable.js -->
+&lt;script type="text/javascript" src="jquery.accordable.min.js"&gt;&lt;/script&gt;
+````
+Next, set up your HTML.
+accordable.js assumes the following HTML structure:
 
 ````
-<ul id="element">
-	<li>
-		<span>Panel Heading 1</span>
-		<div>Body copy.</div>
-	</li>
-	<li>
-		<span>Panel Heading 2</span>
-		<div>Body copy.</div>
-	</li>
-	<!-- etc. -->
+<ul id="element-id">
+    <li>
+        <span>Panel Heading One</span>
+        <div>Body copy goes here...</div>
+    </li>
+    <li>
+        <span>Panel Heading Two</span>
+        <div>Body copy goes here...</div>
+    </li>
+    
+    <!-- etc. -->
+    
 </ul>
 ````
-
-## Initialize
-For the easiest set up:
+Then just call the function to initialize the plugin:
 
 ````javascript
 (function(){
@@ -49,9 +60,10 @@ For the easiest set up:
 
 })();
 ````
+That's it! accordable.js should now be up and working.
 
-## Defaults and Options
-Accordable has a number of optional settings:
+## Default Settings & Options
+accordable.js has a number of optional settings:
 
 ````javascript
 (function(){
@@ -89,8 +101,14 @@ Accordable has a number of optional settings:
 })();
 ````
 
-#### License
+## Support
+For questions or bug reports please [create an issue on Github](https://github.com/jackmparker/accordable.js/issues).
+
+## License
 
 Dual licensed under the MIT and GPL licenses:
 - http://www.gnu.org/licenses/gpl.html
 - http://www.opensource.org/licenses/mit-license.php
+
+## Author
+Copyright &copy;2014 [Jack Parker](http://jackmparker.com). All Rights Reserved.
