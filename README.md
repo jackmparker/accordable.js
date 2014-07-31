@@ -8,7 +8,21 @@ This is my first jQuery plugin. Any **courteous and constructive** critique is w
 *Demo Coming Soon!*
 
 
-##Set Up
+## Features
+- Fully responsive with lots of features
+- Only 4kb! (minified)
+- Choose which slides to open on page load or have all open
+- Set to have one slide open at a time or toggle each individually
+- Supports jQuery easing for panel transitions
+- Built-in callback functions on load, before, and after panel transitions
+- Use your own custom CSS to style
+- Gracefully degrades if user disables JavaScript
+- Can hold any HTML/PHP/JavaScript, etc.
+- Allows multiple instances on a page
+- Works in IE8+ and all <strike>modern</strike> real browsers (Chrome, Safari, Firefox, Opera)
+
+
+## Set Up
 Accordable assumes the following html structure:
 
 ````
