@@ -56,7 +56,7 @@ Then just call the function to initialize the plugin:
 ````javascript
 (function(){
 
-	$('#element').accordable();
+	$('#element-id').accordable();
 
 })();
 ````
