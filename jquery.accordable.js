@@ -1,8 +1,8 @@
 /**
  * --------------------------------------
  *
- *   Accordable.js
- *   http://jackmparker.com/accordable.js
+ *   Accordable.js v1.0.0
+ *   http://jackmparker.com/accordable.js/
  *
  *   A fully loaded jQuery accordion to
  *   fulfill all your accordion needs!
