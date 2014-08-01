@@ -2,10 +2,9 @@
  * --------------------------------------
  *
  *   Accordable.js v1.0.0
- *   http://jackmparker.com/accordable.js/
+ *   http://accordablejs.com
  *
- *   A fully loaded jQuery accordion to
- *   fulfill all your accordion needs!
+ *   A responsive, fully-loaded jQuery accordion plugin
  *
  *   -- CSS not included --
  *
