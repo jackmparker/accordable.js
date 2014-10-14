@@ -89,13 +89,13 @@ accordable.js has a number of optional settings:
 		// BOOLEAN - adds class names to accordion elements for CSS styling
 		
 		onLoad: function() {},
-		// CALLBACK - function on accordion/page load
+		// FUNCTION - callback on accordion/page load
 		
 		beforeToggle: function() {},
-		// CALLBACK - function before accordion fires
+		// FUNCTION - callback before accordion fires
 		
 		afterToggle: function() {}
-		// CALLBACK - function before accordion fires
+		// FUNCTION - callback after accordion fires
 	});
 
 })();
