@@ -1,5 +1,4 @@
 # accordable.js
----------------
 
 A responsive, fully-loaded jQuery accordion plugin.
 
