@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="Accordable.JS is a lightweight jQuery accordion plugin that's fully responsive and loaded with options.">
+	    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	    
+	    <!-- Facebook meta tags for sharing -->
+	    <meta property="og:image" content="http://accordablejs.com/images/facebook-share-photo.jpg" />
+	    <meta property="og:title" content="accordable.js" />
+	    <meta property="og:site_name" content="accordable.js" />
+	    <meta property="og:url" content="http://accordablejs.com" />
+	    <meta property="og:description" content="Accordable.JS is a lightweight jQuery accordion plugin that's fully responsive and loaded with options." />
+	    
+		<title>A responsive, fully-loaded jQuery accordion plugin | accordable.js</title>
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" media="all" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" media="all" href="css/pastie.css">
+	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	    <script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+	    <script type="text/javascript" src="js/jquery.accordable.min.js"></script>
+	    <script type="text/javascript" src="js/rainbow.min.js"></script>
+	    <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+	    <script type="text/javascript" src="js/jquery.localScroll.min.js"></script>
+	    <script type="text/javascript" src="js/waypoints.min.js"></script>
+	    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+	    <script type="text/javascript" src="js/functions.js"></script>
+	    
+	    <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-53450901-1', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
+	    
+	</head>
+	<body id="top">
+		<header>
+			<div class="wrap center">
+				<nav>
+					<ul>
+						<li><a href="#features">features</a></li>
+						<li><a href="#setup">setup</a></li>
+						<li><a href="#options">options</a></li>
+						<li><a href="#examples">examples</a></li>
+						<li><a href="#support">support</a></li>
+					</ul>
+				</nav>
+				
+				<div id="fixed-nav" class="green-background">
+					<div class="wrap">
+						<h1><a href="#top">accordable.js</a></h1>
+						<ul>
+							<li><a href="#features">features</a></li>
+							<li><a href="#setup">setup</a></li>
+							<li><a href="#options">options</a></li>
+							<li><a href="#examples">examples</a></li>
+							<li><a href="#support">support</a></li>
+							<li><a class="button yellow-background" href="#top">download</a></li>
+						</ul>
+						<div class="clear"></div>
+					</div>
+				</div><!--#fixed-nav-->
+				
+				<h1>accordable.js</h1>
+				<p>A responsive, fully-loaded jQuery accordion plugin – v1.0.0</p>
+				
+				<a class="button yellow-background" id="download-accordablejs" href="downloads/accordable.js-master.zip">download zip</a>
+				<a class="button orange-background" id="github" href="https://github.com/jackmparker/accordable.js" target="_blank">view on github</a>
+				
+			</div><!--.wrap-->
+		</header>
+		<div id="content">
+			<div class="wrap">
+				
+				<section id="features">
+					<h2 class="green-color">features</h2>
+					<ul>
+						<li>Fully responsive with lots of features yet lightweight (only 4k minified)</li>
+						<li>Supports jQuery easing for panel transitions</li>
+						<li>Built-in callback functions on load, before, and after panel transitions</li>
+						<li>Use your own custom CSS to style</li>
+						<li>Gracefully degrades if JavaScript is disabled</li>
+						<li>Can hold any HTML/PHP/JavaScript, etc.</li>
+						<li>Allows multiple instances on a page</li>
+						<li>Works in IE8+ and all <strike>real</strike> modern browsers (Chrome, Safari, Firefox, Opera)</li>
+					</ul>
+				</section><!--#features-->
+				
+				<section id="setup">
+					<h2 class="green-color">easy setup</h2>
+					<p>Include the proper files in your page:</p>
+
+<pre data-language="html">
+<code>
+<!-- include jQuery -->
+&lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"&gt;&lt;/script&gt;
+
+<!-- include jQuery easing (optional for easing transitions) -->
+&lt;script type="text/javascript" src="jquery.easing.1.3.min.js"&gt;&lt;/script&gt;
+
+<!-- include accordable.js -->
+&lt;script type="text/javascript" src="jquery.accordable.min.js"&gt;&lt;/script&gt;
+
+</code>
+</pre>
+
+					<p>Next, set up your HTML. <br>accordable.js assumes the following HTML structure:</p>
+					
+<pre data-language="html">
+<code>
+<ul id="element-id">
+    <li>
+        <span>Panel Heading One</span>
+        <div>Body copy goes here...</div>
+    </li>
+    <li>
+        <span>Panel Heading Two</span>
+        <div>Body copy goes here...</div>
+    </li>
+    
+    <!-- etc. -->
+    
+</ul>
+
+</code>
+</pre>
+				
+				<p>Then just call the function to initialize the plugin:</p>
+
+<pre data-language="javascript">
+<code>
+(function(){
+
+    $('#element-id').accordable();
+
+})();
+
+</code>
+</pre>
+				
+				<p>That's it! accordable.js should now be up and working.</p>
+					
+				</section><!--#setup-->
+				
+				<section id="options">
+					<h2 class="green-color">default settings &amp; options</h2>
+					<p>Accordable has a number of optional settings:</p>
+					
+<pre data-language="javascript">
+<code>
+(function(){
+
+    $('#element').accordable({
+
+        openPanel: [],
+        // ARRAY - choose which panels should start opened
+        // accepts array of panels, i.e., [1, 3, 4] etc.
+
+        openAll: false,
+        // BOOLEAN - open all panels on page load
+
+        closeAll: true,
+        // BOOLEAN - when user clicks, only allow one panel open at a time
+
+        speed: 300,
+        // INTEGER - speed of the transition in milliseconds
+
+        easing: 'swing',
+        // STRING - easing style (be sure to include jquery easing)
+
+        addClasses: true,
+        // BOOLEAN - adds class names to accordion elements for CSS styling
+
+        onLoad: function() {},
+        // FUNCTION - callback on accordion/page load
+
+        beforeToggle: function() {},
+        // FUNCTION - callback before accordion fires
+
+        afterToggle: function() {}
+        // FUNCTION - callback after accordion fires
+    });
+
+})();
+
+</code>
+</pre>
+					
+				</section><!--#features-->
+				
+				<section id="examples">
+					<h2 class="green-color">examples</h2>
+					<h3 class="red-color">open first panel on page load</h3>
+					<div class="left">					
+<pre data-language="javascript">
+<code>
+(function(){
+
+    $('#element').accordable({
+
+        openPanel: [1]
+        
+    });
+
+})();
+
+</code>
+</pre>
+					</div><!--.left-->
+					
+					<div class="right">
+					
+						<ul id="accordable-example-one" class="accordable">
+						    <li>
+						        <span>Panel Heading One</span>
+						        <div>
+						        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi velit mauris, euismod at leo et, tempor aliquam diam. Suspendisse erat arcu, iaculis et nisl sed, cursus pharetra justo. Praesent sodales gravida justo sed accumsan. Cras ornare posuere eleifend. </p>
+						        	</div>
+						    </li>
+						    <li>
+						        <span>Panel Heading Two</span>
+						        <div>
+						        	<p>Vestibulum molestie scelerisque orci. Mauris in mattis nunc. Morbi lobortis ante ac blandit congue. Donec non neque et turpis feugiat pretium ut sit amet orci. Mauris mi leo, laoreet et leo et, blandit pellentesque lectus. Mauris ultrices erat ac risus vestibulum interdum. Suspendisse dui metus, imperdiet eu justo nec.</p>
+						        </div>
+						    </li>
+						    <li>
+						        <span>Panel Heading Three</span>
+						        <div>
+						        	<p> Pellentesque placerat mollis justo ut volutpat. Sed lobortis auctor consequat.</p>
+						        </div>
+						    </li>
+						</ul>
+					
+					</div><!--.right-->
+					<div class="clear spacer"></div>
+					
+					
+					<!-- **************************************************************************************************************************** -->
+					
+					
+					<h3 class="red-color">open first and third panels on page load and toggle headings</h3>
+					<div class="left">					
+<pre data-language="javascript">
+<code>
+(function(){
+
+    $('#element').accordable({
+
+        openPanel: [1, 3],
+        closeAll: false
+        
+    });
+
+})();
+
+</code>
+</pre>
+					</div><!--.left-->
+					
+					<div class="right">
+					
+						<ul id="accordable-example-two" class="accordable">
+						    <li>
+						        <span>Panel Heading One</span>
+						        <div>
+						        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi velit mauris, euismod at leo et, tempor aliquam diam. Suspendisse erat arcu, iaculis et nisl sed, cursus pharetra justo. Praesent sodales gravida justo sed accumsan. Cras ornare posuere eleifend. </p>
+						        	</div>
+						    </li>
+						    <li>
+						        <span>Panel Heading Two</span>
+						        <div>
+						        	<p>Vestibulum molestie scelerisque orci. Mauris in mattis nunc. Morbi lobortis ante ac blandit congue. Donec non neque et turpis feugiat pretium ut sit amet orci. Mauris mi leo, laoreet et leo et, blandit pellentesque lectus. Mauris ultrices erat ac risus vestibulum interdum. Suspendisse dui metus, imperdiet eu justo nec.</p>
+						        </div>
+						    </li>
+						    <li>
+						        <span>Panel Heading Three</span>
+						        <div>
+						        	<p> Pellentesque placerat mollis justo ut volutpat. Sed lobortis auctor consequat.</p>
+						        </div>
+						    </li>
+						</ul>
+					
+					</div><!--.right-->
+					<div class="clear spacer"></div>
+					
+					
+					<!-- **************************************************************************************************************************** -->
+					
+					
+					<h3 class="red-color">use a jQuery easing function</h3>
+					<div class="left">					
+<pre data-language="javascript">
+<code>
+(function(){
+
+    $('#element').accordable({
+
+        easing: 'easeInOutQuint',
+        speed: 600
+        
+    });
+
+})();
+
+</code>
+</pre>
+					</div><!--.left-->
+					
+					<div class="right">
+					
+						<ul id="accordable-example-three" class="accordable">
+						    <li>
+						        <span>Panel Heading One</span>
+						        <div>
+						        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi velit mauris, euismod at leo et, tempor aliquam diam. Suspendisse erat arcu, iaculis et nisl sed, cursus pharetra justo. Praesent sodales gravida justo sed accumsan. Cras ornare posuere eleifend. </p>
+						        	</div>
+						    </li>
+						    <li>
+						        <span>Panel Heading Two</span>
+						        <div>
+						        	<p>Vestibulum molestie scelerisque orci. Mauris in mattis nunc. Morbi lobortis ante ac blandit congue. Donec non neque et turpis feugiat pretium ut sit amet orci. Mauris mi leo, laoreet et leo et, blandit pellentesque lectus. Mauris ultrices erat ac risus vestibulum interdum. Suspendisse dui metus, imperdiet eu justo nec.</p>
+						        </div>
+						    </li>
+						    <li>
+						        <span>Panel Heading Three</span>
+						        <div>
+						        	<p> Pellentesque placerat mollis justo ut volutpat. Sed lobortis auctor consequat.</p>
+						        </div>
+						    </li>
+						</ul>
+					
+					</div><!--.right-->
+					<div class="clear spacer"></div>
+					
+					
+					<!-- **************************************************************************************************************************** -->
+					
+					
+					<h3 class="red-color">callback function after transition</h3>
+					<div class="left">					
+<pre data-language="javascript">
+<code>
+(function(){
+
+    $('#element').accordable({
+
+        afterToggle: function() {
+        	
+        	alert('Transition complete!');
+        	
+        }
+        
+    });
+
+})();
+
+</code>
+</pre>
+					</div><!--.left-->
+					
+					<div class="right">
+					
+						<ul id="accordable-example-four" class="accordable">
+						    <li>
+						        <span>Panel Heading One</span>
+						        <div>
+						        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi velit mauris, euismod at leo et, tempor aliquam diam. Suspendisse erat arcu, iaculis et nisl sed, cursus pharetra justo. Praesent sodales gravida justo sed accumsan. Cras ornare posuere eleifend. </p>
+						        	</div>
+						    </li>
+						    <li>
+						        <span>Panel Heading Two</span>
+						        <div>
+						        	<p>Vestibulum molestie scelerisque orci. Mauris in mattis nunc. Morbi lobortis ante ac blandit congue. Donec non neque et turpis feugiat pretium ut sit amet orci. Mauris mi leo, laoreet et leo et, blandit pellentesque lectus. Mauris ultrices erat ac risus vestibulum interdum. Suspendisse dui metus, imperdiet eu justo nec.</p>
+						        </div>
+						    </li>
+						    <li>
+						        <span>Panel Heading Three</span>
+						        <div>
+						        	<p> Pellentesque placerat mollis justo ut volutpat. Sed lobortis auctor consequat.</p>
+						        </div>
+						    </li>
+						</ul>
+					
+					</div><!--.right-->
+					<div class="clear"></div>
+				</section><!--#examples-->
+				
+				<section id="support">
+					<h2 class="green-color">support</h2>
+					<p>For questions or bug reports please <a href="https://github.com/jackmparker/accordable.js/issues" target="_blank">create an issue on Github</a>.</p>
+				</section><!--#support-->
+				
+			</div><!--.wrap-->
+			
+			<footer>
+				<div class="wrap">
+				
+					<small>Copyright &copy;<?php echo date('Y'); ?> <a href="http://jackmparker.com" target="_blank">Jack Parker</a>. All Rights Reserved.</small>
+									
+				</div><!--.wrap-->
+			</footer>
+		</div><!--#content-->
+		
+	</body>
+</html>
