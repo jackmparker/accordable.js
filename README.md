@@ -6,7 +6,7 @@ A responsive, fully-loaded jQuery accordion plugin.
 
 
 ## Full Site & Demo
-http://accordablejs.com
+https://jackmparker.github.io/accordable.js/
 
 
 ## Features
